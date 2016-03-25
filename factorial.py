@@ -18,11 +18,15 @@ else:
 	# If result is bigger than 1 quintillion, put in scientific notation
 	# Also create subtitle of full number
 	if result > 1000000000000000000:
+		# This formatting trick adds commas so it's more human readable
 		print('<subtitle>'+"{:,}".format(result)+'</subtitle>')
+		# This gives it scientific notation
 		result = '%.2E' % result
 	# If result is not bigger than 1 quintillion, print normally
 	else:
+		# This formatting trick adds commas so it's more human readable
 		result = "{:,}".format(result)
+	# Print our factorial'd number!
 	print('<title>'+str(num)+'! = '+result+'</title>')
 
 # Finish printing rest of code to show up
